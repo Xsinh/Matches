@@ -10,8 +10,6 @@ public class Game : MonoBehaviour
 	public Text Score,CinText,Log;
 	public Slider Cin;
 
-	int take_game;
-
 	void Update()
 	{
 		CinText.text = Cin.value.ToString ();
@@ -37,7 +35,6 @@ public class Game : MonoBehaviour
 	{	
 		score = score - Mathf.RoundToInt( Cin.value );
 		Log.text += "\nВы взяли: " + Cin.value.ToString();	
-
 			StartCoroutine (MashineStart ());
 			StartCoroutine (ReStartMatches ());
 	}
